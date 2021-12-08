@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <script type='text/javascript' src='funciones.js'></script>
+    <title>MSQLDBRV</title>
+    <link rel="shortcut icon" href="assets/img/db.png">
+</head>
+<body>  
+
+      <div class="sectable">
+     
+  <div id="ocultos" style="display: none;">
+    <input id="hostname" type="hidden" value="amhweb.ddns.net">
+  <input id="username" type="hidden" value="">
+  <input id="userpass" type="hidden" value="">
+  <input id="databasename" type="hidden" value="">
+  </div>
+ 
+    <div class="formulario">
+      <div style="text-align: center;">
+        <img src="assets/img/db.png" id="icon" alt="User Icon" />
+      </div>
+      <h5 style="color: rgb(109, 109, 109);">MySqlDB Remote</h5>
+      <form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="email" placeholder="Nombre de usuario">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+  </div>
+  <input id="btnlogin" type="button" class="btn-lg" value="ConsultarDB" onclick="obtenerjson();"></input>
+  <div id="loading" style="display: none;">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+</form>
+
+</div>
+
+
+    <div class="contenido">
+    <h5 id="titulo" style="color:blue">Mis tablas</h5>
+
+    <div id="contenedort" class="contenedort">
+        
+       <img src="assets/img/default.jpg" class="imgdb"/>
+        <p style="width: 100%;">Aquí se mostraran sus tablas una vez que realice una consulta a su cuenta</p>
+  </div>
+
+</div>
+
+<div id="tablas" class="table-responsive"></div>
+  
+</div>
+
+
+
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
